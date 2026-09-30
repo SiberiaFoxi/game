@@ -1,0 +1,31 @@
+# Сборка
+build/
+build-*/
+out/
+*.obj
+*.lib
+*.exp
+*.ilk
+*.pdb
+
+# gta-reversed (клонируется run_stalker.bat)
+gta-reversed/
+
+# Игровые артефакты
+*.asi
+*.dll
+*.log
+stalker_save.dat
+
+# Модели (большие бинарники — скачиваются вручную, см. assets/README.md)
+assets/models/*
+!assets/models/README.md
+!assets/models/.gitkeep
+
+# IDE/ОС
+.vs/
+.vscode/
+.idea/
+*.user
+Thumbs.db
+.DS_Store
