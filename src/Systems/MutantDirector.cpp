@@ -376,6 +376,10 @@ void MutantDirector::UpdateEntity(size_t idx, float dt) {
         return;
     }
 
+    // Люди фракций: поведение задано при спавне (движковый ИИ),
+    // дополнительно не трогаем — только мутанты получают нашу логику
+    if (e.defIndex < 0 || !def) return;
+
     float dist = (e.ped->GetPosition() - player->GetPosition()).Magnitude();
     float dist2d = (e.ped->GetPosition() - player->GetPosition()).Magnitude2D();
 

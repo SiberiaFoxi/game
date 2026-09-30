@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 // ============================================================================
 //  Адреса GTA San Andreas 1.0 US (compact exe).
 //
@@ -158,6 +158,9 @@ constexpr uint32_t PopDontCreateRandomGangs = 0xC0FCB2;// bool CPopulation::m_bD
 
 // RwCamera для проверки состояния инициализации (как в dllmain gta-reversed)
 constexpr uint32_t RwCameraInstance = 0xC1703C;        // RwCamera* (не null после старта RenderWare)
+
+// RsGlobal (plugin-sdk: RenderWare.cpp; rw/skeleton.h: RsGlobalType)
+constexpr uint32_t RsGlobal = 0xC17040;                // +0x4 maximumWidth, +0x8 maximumHeight
 
 // Память приложения
 constexpr uint32_t ImageBase = 0x400000;

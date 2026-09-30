@@ -120,10 +120,10 @@ void HudSystem::Draw() {
 
     ModContext& ctx = ModContext::Get();
 
-    // Разрешение: RsGlobal->maximumwidth (0xC17048) x maximumheight
-    // (gta-reversed: source/game_sa/app/platform / RenderWare RsGlobal 0xC17040)
-    uint32_t* rsMaxW = reinterpret_cast<uint32_t*>(0xC17048);
-    uint32_t* rsMaxH = reinterpret_cast<uint32_t*>(0xC1704C);
+    // Разрешение: RsGlobal (0xC17040, plugin-sdk RenderWare.cpp):
+    //   +0x4 maximumWidth, +0x8 maximumHeight
+    uint32_t* rsMaxW = reinterpret_cast<uint32_t*>(0xC17044);
+    uint32_t* rsMaxH = reinterpret_cast<uint32_t*>(0xC17048);
     if (*rsMaxW > 0 && *rsMaxW < 4096) m_screenW = (float)*rsMaxW;
     if (*rsMaxH > 0 && *rsMaxH < 4096) m_screenH = (float)*rsMaxH;
 
